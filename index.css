@@ -1,3 +1,26 @@
 #intro{
-    background-color: blue;
+    width: 100vw;
+    height: 100vh;
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-image: url("http://images.glaciermedia.ca/polopoly_fs/1.1589679.1416247648!/fileImage/httpImage/image.jpg_gen/derivatives/original_size/happy-liver.jpg");
+}
+#about_me{
+    background-color: rgba(255, 255, 255, 0.5);
+    margin-bottom: 100px;
+    padding: 30px;
+}
+
+#about_game{
+    background-color: rgba(255, 255, 255, 0.5);
+    padding: 30px;
+}
+
+#intro_content{
+    position: relative;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 600px;
 }
