@@ -22,5 +22,13 @@
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
-    width: 600px;
+    width: 700px;
+}
+
+#game{
+    width:100vw;
+    height: 100vh;
+    background-color: lightblue;
+    padding: 0;
+    margin: 0;
 }
