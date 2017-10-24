@@ -2,9 +2,12 @@ var Game = Engine('stage');
 
 var cursor = Game.cursor;
 
+var width = $(window).width();
+var height = $(window).height();
+
 Game.set({
-    width: 800, // Default: 640px
-    height: 600, // Default: 480px
+    width: width, // Default: 640px
+    height: height, // Default: 480px
     debugMode: true // Default: false
 });
 Game.preload([
@@ -15,7 +18,7 @@ Game.preload([
 Game.setBackdrop("#333");
 
 
-var cells =[];
+var cells = [];
 var dragging = false;
 
 for(var x=0; x<100; x++) {
@@ -52,6 +55,22 @@ Game.when("mouseup", function () {
         cells[i].orignX = cells[i].x;
         cells[i].orignY = cells[i].y;
     }
+
+    var tmp = cells[0].x;
+    if (tmp > 100) {
+        for (var x=0; x<cells.length; x++) {
+            cells[x].x -= tmp - 100; 
+            cells[x].orignX -= tmp - 100;
+        }
+    }
+
+    var tmp = cells[0].y;
+    if (tmp > 100) {
+        for (var x=0; x<cells.length; x++) {
+            cells[x].y -= tmp - 100; 
+            cells[x].orignY -= tmp - 100;
+        }
+    }
 });
 
 
@@ -67,8 +86,8 @@ Game.forever(function () {
             cells[i].y = cells[i].orignY + offsetY;
         }
     }
-
 });
+
 $("#arrow").click(function(){
     $("html, body").animate({scrollTop: $(document).height()}, "slow");
 })
