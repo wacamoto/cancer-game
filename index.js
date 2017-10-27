@@ -119,22 +119,22 @@ Game.forever(function () {
             origin[i].costumeId = 1;
             var index = cells.indexOf(origin[i]);
 
-            if (origin.indexOf(cells[index+1]) == -1){
+            if (origin.indexOf(cells[index+1]) == -1 && Math.random() < 0.001){
                 if(cells[index+1]!=undefined) origin.push(cells[index+1]);
             } 
-            if (origin.indexOf(cells[index-1]) == -1){
+            if (origin.indexOf(cells[index-1]) == -1 && Math.random() < 0.001){
                 if(cells[index-1]!=undefined) origin.push(cells[index-1]);
             } 
-            if (origin.indexOf(cells[index+W]) == -1){
+            if (origin.indexOf(cells[index+W]) == -1 && Math.random() < 0.001){
                 if(cells[index+W]!=undefined) origin.push(cells[index+W]);
             } 
-            if (origin.indexOf(cells[index-W]) == -1){
+            if (origin.indexOf(cells[index-W]) == -1 && Math.random() < 0.001){
                 if(cells[index-W]!=undefined) origin.push(cells[index-W]);
             } 
-            if (origin.indexOf(cells[index+W+1]) == -1){
+            if (origin.indexOf(cells[index+W+1]) == -1 && Math.random() < 0.001){
                 if(cells[index+W+1]!=undefined) origin.push(cells[index+W+1]);
             } 
-            if (origin.indexOf(cells[index-W+1]) == -1){
+            if (origin.indexOf(cells[index-W+1]) == -1 && Math.random() < 0.001){
                 if(cells[index-W+1]!=undefined) origin.push(cells[index-W+1]);
             }
         }
