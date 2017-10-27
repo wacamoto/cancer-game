@@ -11,7 +11,7 @@ Game.set({
     debugMode: true // Default: false
 });
 Game.preload([
-    "./assets/cell.png",
+    "./assets/blue.png",
 ],function() {
     Game.start();
 });
@@ -24,7 +24,8 @@ var dragging = false;
 for(var x=0; x<100; x++) {
     for(var y=0; y<100; y++) {
         
-        var cell = Game.createSprite("./assets/cell.png");
+        var cell = Game.createSprite(["./assets/blue.png", "./assets/red.png"]);
+        cell.costumeId = 0;
         cell.scale = 0.2;
         cell.x = 30*x;
         cell.y = 25.9*y;
@@ -69,6 +70,22 @@ Game.when("mouseup", function () {
         for (var x=0; x<cells.length; x++) {
             cells[x].y -= tmp - 100; 
             cells[x].orignY -= tmp - 100;
+        }
+    }
+
+    var tmp = cells[9999].x;
+    if (tmp < width-100) {
+        for (var x=0; x<cells.length; x++) {
+            cells[x].x += width - 100 - tmp; 
+            cells[x].orignX += width - 100 - tmp;
+        }
+    }
+
+    var tmp = cells[9999].y;
+    if (tmp < height-100) {
+        for (var x=0; x<cells.length; x++) {
+            cells[x].y += height - 100 - tmp; 
+            cells[x].orignY += height - 100 - tmp;
         }
     }
 });
