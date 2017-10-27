@@ -26,8 +26,8 @@ var dragging = false;
 var origin = [];
 
 
-for(var x=0; x<W; x++) {
-    for(var y=0; y<H; y++) {
+for(var y=0; y<W; y++) {
+    for(var x=0; x<H; x++) {
         
         var cell = Game.createSprite(["./assets/blue.png", "./assets/red.png"]);
         cell.costumeId = 0;
@@ -113,10 +113,30 @@ Game.forever(function () {
     }
 
     for(var i=0; i< origin.length; i++){
-        if(origin[i].scale < 0.7){
+        if(origin[i].scale < 0.6){
             origin[i].scale +=0.003;
         }else{
             origin[i].costumeId = 1;
+            var index = cells.indexOf(origin[i]);
+
+            if (origin.indexOf(cells[index+1]) == -1){
+                if(cells[index+1]!=undefined) origin.push(cells[index+1]);
+            } 
+            if (origin.indexOf(cells[index-1]) == -1){
+                if(cells[index-1]!=undefined) origin.push(cells[index-1]);
+            } 
+            if (origin.indexOf(cells[index+W]) == -1){
+                if(cells[index+W]!=undefined) origin.push(cells[index+W]);
+            } 
+            if (origin.indexOf(cells[index-W]) == -1){
+                if(cells[index-W]!=undefined) origin.push(cells[index-W]);
+            } 
+            if (origin.indexOf(cells[index+W+1]) == -1){
+                if(cells[index+W+1]!=undefined) origin.push(cells[index+W+1]);
+            } 
+            if (origin.indexOf(cells[index-W+1]) == -1){
+                if(cells[index-W+1]!=undefined) origin.push(cells[index-W+1]);
+            }
         }
     }
 });
