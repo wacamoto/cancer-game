@@ -1,4 +1,6 @@
 var Game = Engine('stage');
+var W = 50;
+var H = 50;
 
 var cursor = Game.cursor;
 
@@ -21,8 +23,11 @@ Game.setBackdrop("#333");
 var cells = [];
 var dragging = false;
 
-for(var x=0; x<100; x++) {
-    for(var y=0; y<100; y++) {
+var origin = [];
+
+
+for(var x=0; x<W; x++) {
+    for(var y=0; y<H; y++) {
         
         var cell = Game.createSprite(["./assets/blue.png", "./assets/red.png"]);
         cell.costumeId = 0;
@@ -42,6 +47,9 @@ for(var x=0; x<100; x++) {
         cells.push(cell);
     }
 }
+
+var o = cells[Math.floor(Math.random()*W*H)];
+origin.push(o);
 
 var pos = {};
 Game.when("mousedown", function () {
@@ -73,7 +81,7 @@ Game.when("mouseup", function () {
         }
     }
 
-    var tmp = cells[9999].x;
+    var tmp = cells[2499].x;
     if (tmp < width-100) {
         for (var x=0; x<cells.length; x++) {
             cells[x].x += width - 100 - tmp; 
@@ -81,7 +89,7 @@ Game.when("mouseup", function () {
         }
     }
 
-    var tmp = cells[9999].y;
+    var tmp = cells[2499].y;
     if (tmp < height-100) {
         for (var x=0; x<cells.length; x++) {
             cells[x].y += height - 100 - tmp; 
@@ -101,6 +109,14 @@ Game.forever(function () {
         for(var i=0; i<cells.length; i++) {
             cells[i].x = cells[i].orignX + offsetX;
             cells[i].y = cells[i].orignY + offsetY;
+        }
+    }
+
+    for(var i=0; i< origin.length; i++){
+        if(origin[i].scale < 0.7){
+            origin[i].scale +=0.003;
+        }else{
+            origin[i].costumeId = 1;
         }
     }
 });
