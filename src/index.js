@@ -140,3 +140,13 @@ Game.forever(function () {
         }
     }
 });
+
+var zoom = 50;
+$('#scroll-input').change(function () {
+    var val = $(this).val();
+    Game.set({
+        width: width*(val/zoom),
+        height: height*(val/zoom),
+        zoom: 50/val
+    });
+})
