@@ -1,6 +1,6 @@
 var Game = Engine('stage');
-var W = 50;
-var H = 50;
+var W = 30;
+var H = 30;
 
 var cursor = Game.cursor;
 
@@ -81,7 +81,7 @@ Game.when("mouseup", function () {
         }
     }
 
-    var tmp = cells[2499].x;
+    var tmp = cells[899].x;
     if (tmp < width-100) {
         for (var x=0; x<cells.length; x++) {
             cells[x].x += width - 100 - tmp; 
@@ -89,7 +89,7 @@ Game.when("mouseup", function () {
         }
     }
 
-    var tmp = cells[2499].y;
+    var tmp = cells[899].y;
     if (tmp < height-100) {
         for (var x=0; x<cells.length; x++) {
             cells[x].y += height - 100 - tmp; 
