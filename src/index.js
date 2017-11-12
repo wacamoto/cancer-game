@@ -31,17 +31,17 @@ for(var y=0; y<W; y++) {
         
         var cell = Game.createSprite(["./assets/blue.png", "./assets/red.png"]);
         cell.costumeId = 0;
-        cell.scale = 0.2;
-        cell.x = 30*x;
-        cell.y = 25.9*y;
+        cell.scale = 0.6;
+        cell.x = 120*x;
+        cell.y = 103.6*y;
 
         // 初始化的位置
-        cell.orignX = 30*x;
-        cell.orignY = 25.9*y;
+        cell.orignX = 120*x;
+        cell.orignY = 103.6*y;
 
         if (y%2 == 0) {
-            cell.x += 15;
-            cell.orignX += 15;
+            cell.x += 60;
+            cell.orignX += 60;
         }
 
         cells.push(cell);
@@ -113,8 +113,8 @@ Game.forever(function () {
     }
 
     for(var i=0; i< origin.length; i++){
-        if(origin[i].scale < 0.6){
-            origin[i].scale +=0.003;
+        if(origin[i].scale < 2){
+            origin[i].scale +=0.005;
         }else{
             origin[i].costumeId = 1;
             var index = cells.indexOf(origin[i]);
