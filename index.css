@@ -10,11 +10,13 @@
     background-color: rgba(255, 255, 255, 0.5);
     margin-bottom: 100px;
     padding: 30px;
+    height: 350px;
 }
 
 #about_game{
     background-color: rgba(255, 255, 255, 0.5);
     padding: 30px;
+    height: 300px;
 }
 
 #intro_content{
@@ -22,7 +24,7 @@
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
-    width: 700px;
+    width: 1000px;
 }
 
 #game{
@@ -31,4 +33,9 @@
     background-color: lightblue;
     padding: 0;
     margin: 0;
+}
+
+#pic{
+    height: 320px;
+    width: 260px;
 }
