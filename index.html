@@ -17,6 +17,7 @@
 
 <body>
     <div id="game">
+        <input type="range" id="scroll-input" style="position: fixed; right: 10px; bottom: 10px;">
         <div id="menu">
             <div>
                 <img src="./assets/tower.png" class="menu-btn" alt="">
@@ -47,30 +48,33 @@
         <img src="./assets/arrow.png" alt="" id="arrow" style="position: absolute; bottom: 50px; left: 50vw; width: 50px; height: 50px;">
     </div>
     <div id="intro">
-        <div id="intro_content">
-            <div id="about_game">
-                <img id="pic" src="./assets/medicine2.jpg" alt="" align="right" height="150px" width="160px">
-                <h1>About XXX</h1>
-                <p>
-                    <font face="helvetica" size="4">Liver cancer is one of the most prevalent cancers in Taiwan. It is also one of the top ten cancers in
-                        the United States. XXX is a game that would guide you through the methods of treating liver cancers
-                        and what you would need to consider when you are a liver cancer victim. While killing the cancer
-                        cells in XXX, you would also gain more knowledge of medicine and all sorts of therapies, especially
-                        ones that are targeted for liver cancers.</font>
-                </p>
-            </div>
-            <div id="about_me">
-                <img id="pic" src="./assets/medicine.jpg" alt="" align="right" class="img-rounded">
-                <h1>About Me - Shiloh Liu</h1>
-                <p>
-                    <font face="helvetica" size="4">My father is an interventional radiologist who does minimally-invasive image-guided procedures to diagnose
-                        and treat different diseases. He is specialised in treating the abdomen, especially for liver cancers
-                        such as hepatitis. I am exposed to this kind of knowledge from a very young age. I am also extremely
-                        interested in what my father is doing and after quite a long talk with my father, I decided to make
-                        XXX, combining my passion for biology and coding both. My goal is to let more people, including you,
-                        know more about liver cancer, its treatments, and the importance of making the right decision.</font>
-                </p>
-            </div>
+        <div id="about_game">
+            <h1>About XXX</h1>
+            <p>
+                <font face="helvetica" size="4">Liver cancer is one of the most prevalent cancers in Taiwan. It is also one of the top ten cancers in
+                    the United States. XXX is a game that would guide you through the methods of treating liver cancers
+                    and what you would need to consider when you are a liver cancer victim. While killing the cancer
+                    cells in XXX, you would also gain more knowledge of medicine and all sorts of therapies, especially
+                    ones that are targeted for liver cancers.</font>
+            </p>
+        </div>
+        <div id="pic">
+            <div class="pic_1"></div>
+        </div>
+        <div id="about_me"> 
+            <h1>About Me - Shiloh Liu</h1>
+            <p>
+                <font face="helvetica" size="4">My father is an interventional radiologist who does minimally-invasive image-guided procedures to diagnose
+                    and treat different diseases. He is specialised in treating the abdomen, especially for liver cancers
+                    such as hepatitis. I am exposed to this kind of knowledge from a very young age. I am also extremely
+                    interested in what my father is doing and after quite a long talk with my father, I decided to make
+                    XXX, combining my passion for biology and coding both. My goal is to let more people, including you,
+                    know more about liver cancer, its treatments, and the importance of making the right decision.</font>
+            </p>
+        </div>
+        <div id="my_links">
+            <i class="fa fa-github-square" aria-hidden="true"></i>
+            <i class="fa fa-envelope" aria-hidden="true"></i>
         </div>
     </div>
 
@@ -92,5 +96,4 @@
     <script src="./src/text.js"></script>
     <script src="./src/tower.js"></script>
 </body>
-
 </html>

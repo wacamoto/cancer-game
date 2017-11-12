@@ -1,50 +1,70 @@
 body{
     padding: 0;
     margin: 0;
-}
-#intro{
-    width: 100vw;
-    height: 120vh;
-    background-size: contain;
-    background-repeat: no-repeat;
-    background-position: center;
-    background-image: url("http://images.glaciermedia.ca/polopoly_fs/1.1589679.1416247648!/fileImage/httpImage/image.jpg_gen/derivatives/original_size/happy-liver.jpg");
-}
-#about_me{
-    background-color: rgba(255, 255, 255, 0.5);
-    margin-bottom: 100px;
-    padding: 30px;
-    height: 350px;
-}
-
-#about_game{
-    background-color: rgba(255, 255, 255, 0.5);
-    padding: 30px;
-    height: 350px;
-}
-
-#intro_content{
-    position: relative;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    width: 1000px;
+    background-color: #f6f6f6;
 }
 
 #game{
-    width:100vw;
+    width: 100vw;
     height: 100vh;
     background-color: lightblue;
     padding: 0;
     margin: 0;
-    position: relative;
+    top: 0;
+    left: 0;
+    position: fixed;
+    z-index: -10;
 }
 
-#pic{
-    height: 320px;
-    width: 260px;
-    border-radius: 15px;
+#intro {
+    z-index: 10;
+    background-color: #fff;
+    margin-top: 100vh;
 }
+
+#about_game{
+    text-align: center;
+    width: 100%;
+    padding: 25vh 60px;
+    color: #555;
+}
+
+
+#about_me {
+    text-align: center;
+    width: 100%;
+    padding: 25vh 60px;
+    color: #555;
+}
+
+#pic {
+    height: 75vh;
+}
+
+#pic div {
+    display: inline-block;
+    width: 100%;
+    height: 100%;
+    margin: 0;
+    background-position: center;
+    background-size: cover;
+    background-attachment: fixed;
+    background-image: url(./assets/medicine2.jpg);
+}
+
+#my_links {
+    padding: 50px;
+    height: 150px;
+    background-color: #f5f5f5;
+    text-align: center;
+}
+
+#my_links i {
+    margin: 15px;
+    font-size: 3em;
+    color: #777;
+}
+
 #menu{
     position: fixed;
     top: 30px;
